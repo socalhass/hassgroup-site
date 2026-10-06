@@ -68,6 +68,15 @@
   .feat-listed-by{margin-top:18px;font-size:.78rem;color:#8a97a0;}
   @media(max-width:860px){.feat-card{grid-template-columns:1fr;}.feat-gallery{min-height:260px;}}
 
+  .floor-section{margin-top:40px;}
+  .floor-label{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .floor-label .num{width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.9rem;flex-shrink:0;}
+  .floor-label h4{font-size:1.2rem;margin:0;}
+  .floor-label .floor-note{color:#8a97a0;font-size:.82rem;margin-left:auto;}
+  .floorplan-block{margin-top:40px;text-align:center;}
+  .floorplan-block img{border-radius:16px;box-shadow:0 10px 30px rgba(15,42,61,.08);margin:18px auto 0;max-width:100%;}
+  .floorplan-note{color:#8a97a0;font-size:.78rem;margin-top:10px;}
+
   .browse{padding:80px 0 100px;}
   .filter-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:40px 0 46px;}
   .filter-btn{background:#fff;border:1px solid rgba(15,42,61,.12);color:var(--navy);padding:9px 18px;border-radius:30px;font-family:inherit;font-size:.85rem;cursor:pointer;transition:.2s;}
@@ -158,33 +167,67 @@
     <div class="section-head">
       <div class="eyebrow">Featured Investment Property</div>
       <h2>113 N Alvarado St, Ojai (Meiners Oaks)</h2>
-      <p>A HASS GROUP-owned investment opportunity, offered directly.</p>
+      <p>A HASS GROUP-owned, two-unit income property, offered directly.</p>
     </div>
 
-    <div class="feat-card">
-      <div class="feat-gallery">
-        <a href="img/VCV-Alvarado-06.jpg" target="_blank"><img src="img/VCV-Alvarado-06.jpg" alt="Living room and kitchen at 113 N Alvarado St, Ojai"></a>
-        <a href="img/VCV-Alvarado-09.jpg" target="_blank"><img src="img/VCV-Alvarado-09.jpg" alt="Fireplace sitting nook at 113 N Alvarado St, Ojai"></a>
-        <a href="img/VCV-Alvarado-20.jpg" target="_blank"><img src="img/VCV-Alvarado-20.jpg" alt="Private deck at 113 N Alvarado St, Ojai"></a>
-      </div>
-      <div class="feat-body">
-        <div class="feat-eyebrow"><span class="feat-tag">Income Property</span></div>
-        <h3>Two-Unit Income Property in the Heart of Meiners Oaks</h3>
-        <div class="feat-loc">Ojai, CA · Ventura County</div>
-        <div class="feat-specs">
-          <div><strong>2 Units</strong>Main house + lower unit</div>
-          <div><strong>Fully Leased</strong>Occupied, cash-flowing</div>
-          <div><strong>~$7–8K/mo</strong>Combined gross rent</div>
-          <div><strong>Walkable</strong>Steps to downtown Ojai</div>
+    <div class="floor-section">
+      <div class="floor-label"><span class="num">2</span><h4>Upper Residence</h4><span class="floor-note">3 bed · 2 bath + primary suite</span></div>
+      <div class="feat-card">
+        <div class="feat-gallery">
+          <a href="img/VCV-Alvarado-06.jpg" target="_blank"><img src="img/VCV-Alvarado-06.jpg" alt="Living room and kitchen, upper residence at 113 N Alvarado St, Ojai"></a>
+          <a href="img/VCV-Alvarado-09.jpg" target="_blank"><img src="img/VCV-Alvarado-09.jpg" alt="Stone fireplace sitting nook, upper residence at 113 N Alvarado St, Ojai"></a>
+          <a href="img/VCV-Alvarado-20.jpg" target="_blank"><img src="img/VCV-Alvarado-20.jpg" alt="Private deck, upper residence at 113 N Alvarado St, Ojai"></a>
         </div>
-        <p class="desc">A renovated multi-unit property producing consistent rental income in one of Ojai's most walkable pockets — steps from downtown shops and restaurants, the Ojai Trolley stop, and the Ventura River Preserve trailheads. Quartz kitchen, hardwood floors, a stone fireplace, and private outdoor space. Offered directly by the owner — serious inquiries receive full financials, photos, and showing availability.</p>
-        <div class="feat-actions">
-          <a href="mailto:hassgroupusa@gmail.com?subject=113%20N%20Alvarado%20St%20-%20Investment%20Inquiry" class="btn rust">Request Investment Details</a>
-          <a href="tel:18058880133" class="btn" style="background:transparent;border:1px solid rgba(15,42,61,.18);color:var(--navy);">Call (805) 888-0133</a>
+        <div class="feat-body">
+          <div class="feat-eyebrow"><span class="feat-tag">Owner's Unit</span></div>
+          <h3>Main Residence — Vaulted Great Room &amp; Stone Fireplace</h3>
+          <div class="feat-loc">Ojai, CA · Ventura County</div>
+          <div class="feat-specs">
+            <div><strong>3 Bed / 2 Bath</strong>Plus primary suite</div>
+            <div><strong>Vaulted Ceilings</strong>Skylights throughout</div>
+            <div><strong>Stone Fireplace</strong>Great room centerpiece</div>
+            <div><strong>Private Deck</strong>Treetop views</div>
+          </div>
+          <p class="desc">The main residence spans the full second floor — an open kitchen and great room under vaulted, skylit ceilings, a stone fireplace with built-in window seat, hardwood floors throughout, a primary suite, two additional bedrooms, and a private deck.</p>
         </div>
-        <div class="feat-listed-by">Offered by HASS GROUP USA, in affiliation with LPT Realty · DRE 01894430</div>
       </div>
     </div>
+
+    <div class="floor-section">
+      <div class="floor-label"><span class="num">1</span><h4>Lower Level — Accessory Unit</h4><span class="floor-note">1 bed · 1 bath, private entrance</span></div>
+      <div class="feat-card">
+        <div class="feat-gallery">
+          <a href="img/ADU-Alvarado-exterior.jpg" target="_blank"><img src="img/ADU-Alvarado-exterior.jpg" alt="Exterior of 113 N Alvarado St, Ojai"></a>
+          <a href="img/ADU-Alvarado-kitchen.jpg" target="_blank"><img src="img/ADU-Alvarado-kitchen.jpg" alt="Kitchen in the lower-level unit at 113 N Alvarado St, Ojai"></a>
+          <a href="img/ADU-Alvarado-living.jpg" target="_blank"><img src="img/ADU-Alvarado-living.jpg" alt="Living room in the lower-level unit at 113 N Alvarado St, Ojai"></a>
+        </div>
+        <div class="feat-body">
+          <div class="feat-eyebrow"><span class="feat-tag">Income Unit</span></div>
+          <h3>Self-Contained 1BR Unit — Private Entrance &amp; Yard</h3>
+          <div class="feat-loc">Ojai, CA · Ventura County</div>
+          <div class="feat-specs">
+            <div><strong>1 Bed / 1 Bath</strong>Fully renovated</div>
+            <div><strong>Own Entrance</strong>Separate from upper unit</div>
+            <div><strong>In-Unit Laundry</strong>Stacked washer/dryer</div>
+            <div><strong>Private Yard</strong>French doors to patio</div>
+          </div>
+          <p class="desc">A fully renovated one-bedroom unit with its own entrance, white shaker kitchen with quartz counters and stainless appliances, in-unit stacked laundry, and French doors opening onto a private backyard patio — currently leased and cash-flowing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="floorplan-block">
+      <div class="eyebrow">Floor Plan</div>
+      <h3>Layout, Upper Residence &amp; Garage Level</h3>
+      <img src="img/Alvarado-floorplan.jpg" alt="Floor plan of 113 N Alvarado St, Ojai — upper residence and garage level" loading="lazy">
+      <div class="floorplan-note">Sizes and dimensions are approximate. Virtual tour and detailed lower-level plan coming soon.</div>
+    </div>
+
+    <div class="feat-actions" style="justify-content:center;margin-top:40px;">
+      <a href="mailto:hassgroupusa@gmail.com?subject=113%20N%20Alvarado%20St%20-%20Investment%20Inquiry" class="btn rust">Request Investment Details</a>
+      <a href="tel:18058880133" class="btn" style="background:transparent;border:1px solid rgba(15,42,61,.18);color:var(--navy);">Call (805) 888-0133</a>
+    </div>
+    <div class="feat-listed-by" style="text-align:center;margin-top:16px;">Offered by HASS GROUP USA, in affiliation with LPT Realty · DRE 01894430</div>
   </div>
 </section>
 
