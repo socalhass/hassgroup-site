@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Listings &amp; Markets | HASS GROUP USA</title>
+<meta name="description" content="Browse HASS GROUP USA's active markets across Ventura, Santa Barbara, Montecito, Malibu, Calabasas, Thousand Oaks, Ojai, Baja Mexico, and Italy — and request off-market access.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2a3d;
+    --teal:#2e6069;
+    --teal-light:#7fa7ac;
+    --cream:#faf8f4;
+    --ink:#1c2b33;
+    --rust:#c0604a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--navy);}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-block;background:var(--teal-light);color:#fff;padding:14px 30px;border-radius:30px;font-weight:500;letter-spacing:.02em;transition:background .2s;border:none;cursor:pointer;font-family:inherit;font-size:.95rem;}
+  .btn:hover{background:var(--teal);}
+  .btn.rust{background:var(--rust);}
+  .btn.rust:hover{background:#a34d39;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.95);backdrop-filter:blur(6px);border-bottom:1px solid rgba(15,42,61,.08);}
+  header .container{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;color:var(--navy);letter-spacing:.02em;}
+  .logo span{color:var(--rust);}
+  nav ul{list-style:none;display:none;gap:22px;font-size:.88rem;}
+  nav a:hover{color:var(--teal);}
+  nav a.active{color:var(--rust);}
+  .nav-cta{display:none;}
+  @media(min-width:960px){nav ul{display:flex;}.nav-cta{display:inline-block;}}
+
+  .page-hero{position:relative;min-height:40vh;display:flex;align-items:center;background:linear-gradient(180deg,rgba(15,42,61,.6),rgba(15,42,61,.88)),url('img/image1.jpg') center/cover no-repeat;color:#fff;padding:70px 0;}
+  .page-hero h1{color:#fff;font-size:clamp(1.9rem,4.5vw,3.2rem);max-width:760px;margin-bottom:16px;}
+  .page-hero p{max-width:640px;opacity:.92;font-size:1.05rem;}
+
+  .eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--rust);font-weight:600;margin-bottom:10px;}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 20px;}
+  .section-head p{color:#44565f;max-width:640px;margin:14px auto 0;}
+
+  .notice{background:#fff;border-left:4px solid var(--teal-light);border-radius:0 10px 10px 0;padding:22px 26px;max-width:860px;margin:0 auto 0;box-shadow:0 10px 30px rgba(15,42,61,.05);}
+  .notice p{color:#44565f;font-size:.92rem;}
+  .notice strong{color:var(--navy);}
+
+  .browse{padding:80px 0 100px;}
+  .filter-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:40px 0 46px;}
+  .filter-btn{background:#fff;border:1px solid rgba(15,42,61,.12);color:var(--navy);padding:9px 18px;border-radius:30px;font-family:inherit;font-size:.85rem;cursor:pointer;transition:.2s;}
+  .filter-btn:hover{border-color:var(--teal-light);}
+  .filter-btn.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+  .listing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;}
+  .listing-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(15,42,61,.07);transition:opacity .25s,transform .25s;}
+  .listing-card.hide{display:none;}
+  .listing-card .thumb{height:200px;background-size:cover;background-position:center;position:relative;}
+  .listing-card .thumb.gradient-baja{background:linear-gradient(135deg,var(--teal),var(--navy));display:flex;align-items:flex-end;padding:20px;}
+  .listing-card .thumb.gradient-italy{background:linear-gradient(135deg,var(--rust),var(--navy));display:flex;align-items:flex-end;padding:20px;}
+  .listing-card .thumb .tag{background:rgba(255,255,255,.15);color:#fff;font-size:.75rem;padding:6px 12px;border-radius:20px;backdrop-filter:blur(4px);}
+  .listing-card .thumb-tag{position:absolute;top:14px;left:14px;background:rgba(15,42,61,.75);color:#fff;font-size:.72rem;padding:6px 12px;border-radius:20px;letter-spacing:.03em;}
+  .listing-body{padding:24px 24px 26px;}
+  .listing-body h3{font-size:1.15rem;margin-bottom:6px;}
+  .listing-stat{color:var(--rust);font-size:.82rem;font-weight:600;margin-bottom:12px;}
+  .listing-body p{color:#50626a;font-size:.9rem;margin-bottom:16px;}
+  .listing-body a.inquire{color:var(--teal);font-size:.86rem;font-weight:600;}
+  .listing-body a.inquire:hover{color:var(--navy);}
+
+  .access{background:var(--navy);padding:90px 0;text-align:center;color:#fff;}
+  .access .eyebrow{color:#e4b9ab;}
+  .access h2{color:#fff;font-size:clamp(1.7rem,3.5vw,2.4rem);max-width:720px;margin:0 auto 18px;}
+  .access p{max-width:620px;margin:0 auto 10px;color:#c7d4d8;}
+  .access .btn{margin-top:22px;}
+
+  .alerts{padding:100px 0;text-align:center;}
+  .alert-form{max-width:640px;margin:46px auto 0;background:#fff;border-radius:16px;padding:36px;box-shadow:0 10px 30px rgba(15,42,61,.06);text-align:left;}
+  .alert-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  .alert-form label{display:block;font-size:.8rem;color:var(--navy);font-weight:600;margin-bottom:6px;}
+  .alert-form input,.alert-form select{width:100%;padding:12px 14px;border:1px solid rgba(15,42,61,.15);border-radius:8px;font-family:inherit;font-size:.9rem;background:var(--cream);}
+  .alert-form .full{grid-column:1/-1;}
+  .alert-form .btn{width:100%;margin-top:6px;}
+  .alert-note{font-size:.78rem;color:#7c8a8f;margin-top:14px;text-align:center;}
+  @media(max-width:600px){.alert-row{grid-template-columns:1fr;}}
+
+  footer{background:var(--navy);color:#cfd9dc;padding-top:60px;}
+  .foot-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:50px;}
+  .foot-action{background:rgba(255,255,255,.06);border-radius:14px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;font-family:'Playfair Display',serif;font-weight:600;color:#fff;}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1.3fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-grid h4{color:#fff;font-size:.95rem;margin-bottom:16px;letter-spacing:.03em;}
+  .foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:.88rem;}
+  .foot-logo{font-family:'Playfair Display',serif;font-weight:800;color:#fff;font-size:1.3rem;margin-bottom:6px;}
+  .foot-dre{font-size:.78rem;color:#8fa0a6;margin-bottom:18px;}
+  .foot-grid p{font-size:.85rem;color:#a9b7bb;}
+  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr;}}
+  .bottom-bar{display:flex;justify-content:space-between;padding:22px 0;font-size:.8rem;color:#8fa0a6;flex-wrap:wrap;gap:10px;}
+  .container.notice-wrap{margin-top:-28px;position:relative;z-index:2;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">HASS<span>GROUP</span> USA</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="listings.html" class="active">Listings</a></li>
+        <li><a href="international.html">International</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn nav-cta">Partner with HASS</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow" style="color:#e4b9ab">Property Listings</div>
+    <h1>Explore where HASS GROUP is active right now.</h1>
+    <p>Browse the markets we work in across Southern California, Baja Mexico, and Italy — then tell us what you're after and we'll hand-pick the opportunities that fit.</p>
+  </div>
+</section>
+
+<div class="container notice-wrap">
+  <div class="notice">
+    <p><strong>How this works:</strong> HASS GROUP curates listings and off-market opportunities directly for serious buyers and investors, rather than running a public search tool. The cards below reflect the real markets and current conditions we're tracking — reach out and we'll send you the specific properties available right now in the area you're interested in.</p>
+  </div>
+</div>
+
+<section class="browse">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Browse by Market</div>
+      <h2>Southern California, Baja Mexico &amp; Italy</h2>
+      <p>Filter by region to see current conditions, then inquire for live listings.</p>
+    </div>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All Regions</button>
+      <button class="filter-btn" data-filter="us">Southern California</button>
+      <button class="filter-btn" data-filter="intl">International</button>
+    </div>
+
+    <div class="listing-grid" id="listingGrid">
+      <div class="listing-card" data-region="us">
+        <div class="thumb" style="background-image:url('img/ventura.jpg')"><span class="thumb-tag">Southern California</span></div>
+        <div class="listing-body">
+          <h3>Ventura County</h3>
+          <div class="listing-stat">Median $870K · 1,500+ homes · 57 days on market</div>
+          <p>The competition has cooled, but fundamentals are strong. Strategic buyers are stepping in now, before the next price climb.</p>
+          <a class="inquire" href="#contact">Inquire about this market →</a>
+        </div>
+      </div>
+
+      <div class="listing-card" data-region="us">
+        <div class="thumb" style="background-image:url('img/santabarbara.jpg')"><span class="thumb-tag">Southern California</span></div>
+        <div class="listing-body">
+          <h3>Santa Barbara County</h3>
+          <div class="listing-stat">Median $2.9M · up 28% in one year</div>
+          <p>Inventory is growing, and serious buyers still pay above asking for the right property.</p>
+          <a class="inquire" href="#contact">Inquire about this market →</a>
+        </div>
+      </div>
+
+      <div class="listing-card" data-region="us">
+        <div class="thumb" style="background-image:url('img/montecito-area.jpg')"><span class="thumb-tag">Southern California</span></div>
+        <div class="listing-body">
+          <h3>Montecito</h3>
+          <div class="listing-stat">Median near $10.85M · inventory up 20%</div>
+          <p>Buyers with capital are quietly gaining control as sellers adjust expectations.</p>
+          <a class="inquire" href="#contact">Inquire about this market →</a>
+        </div>
+      </div>
+
+      <div class="listing-card" data-region="us">
+        <div class="thumb" style="background-image:url('img/malibu.jpg')"><span class="thumb-tag">Southern California</span></div>
+        <div class="listing-body">
+          <h3>Malibu</h3>
+          <div class="listing-stat">Inventory rising</div>
+          <p>Top properties are still going fast. This is where vision meets velocity.</p>
+          <a class="inquire" href="#contact">Inquire about this market →</a>
+        </div>
+      </div>
+
+      <div class="listing-card" data-region="us">
+        <div class="thumb" style="background-image:url('img/calabasas.jpg')"><span class="thumb-tag">Southern California</span></div>
+        <div class="listing-body">
+          <h3>Calabasas</h3>
+          <div class="listing-stat">Up 7.2% to $4.9M</div>
+          <p>Gated exclusivity, celebrity appeal, and high sustainability demand keep it hot even as listings tighten.</p>
+          <a class="inquire" href="#contact">Inquire about this market →</a>
+        </div>
+      </div>
+
+      <div class="listing-card" data-region="us">
+        <div class="thumb" style="background-image:url('img/thousandoaks.jpg')"><span class="thumb-tag">Southern California</span></div>
+        <div class="listing-body">
+          <h3>Thousand Oaks &amp; Ojai</h3>
+          <div class="listing-stat">Inventory up</div>
+          <p>Buyers are pivoting here for value, privacy, and appreciation potential, before attention shifts inland.</p>
+          <a class="inquire" href="#contact">Inquire about this market →</a>
+        </div>
+      </div>
+
+      <div class="listing-card" data-region="intl">
+        <div class="thumb gradient-baja"><span class="tag">International</span></div>
+        <div class="listing-body">
+          <h3>Baja Mexico</h3>
+          <div class="listing-stat">Beachfront &amp; eco-friendly</div>
+          <p>Coastal investment opportunities built around beachfront access, sustainable development, and strong lifestyle ROI.</p>
+          <a class="inquire" href="international.html">See international investments →</a>
+        </div>
+      </div>
+
+      <div class="listing-card" data-region="intl">
+        <div class="thumb gradient-italy"><span class="tag">International</span></div>
+        <div class="listing-body">
+          <h3>Italy</h3>
+          <div class="listing-stat">Retirement homes &amp; eco-resorts</div>
+          <p>Properties for clients drawn to Italy's pace of life — from retirement homes to eco-resort and land opportunities.</p>
+          <a class="inquire" href="international.html">See international investments →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="access">
+  <div class="container">
+    <div class="eyebrow">Off-Market Access</div>
+    <h2>Want to see what's actually available right now?</h2>
+    <p>Tell us your budget, timeline, and target area, and HASS GROUP will send you active and off-market opportunities that match — no sifting through public listings required.</p>
+    <a href="#contact" class="btn rust">Request Off-Market Access</a>
+  </div>
+</section>
+
+<section class="alerts">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Property Alerts</div>
+      <h2>Get notified when the right property comes up.</h2>
+      <p>Fill this out and we'll reach out directly as matching opportunities become available.</p>
+    </div>
+    <form class="alert-form" id="alertForm">
+      <div class="alert-row">
+        <div>
+          <label for="af-name">Name</label>
+          <input type="text" id="af-name" required>
+        </div>
+        <div>
+          <label for="af-email">Email</label>
+          <input type="email" id="af-email" required>
+        </div>
+      </div>
+      <div class="alert-row">
+        <div>
+          <label for="af-region">Region of Interest</label>
+          <select id="af-region">
+            <option>Ventura County</option>
+            <option>Santa Barbara County</option>
+            <option>Montecito</option>
+            <option>Malibu</option>
+            <option>Calabasas</option>
+            <option>Thousand Oaks &amp; Ojai</option>
+            <option>Baja Mexico</option>
+            <option>Italy</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div>
+          <label for="af-budget">Target Budget</label>
+          <input type="text" id="af-budget" placeholder="e.g. $1.5M–$2M">
+        </div>
+      </div>
+      <div class="alert-row">
+        <div class="full">
+          <label for="af-notes">What are you looking for?</label>
+          <input type="text" id="af-notes" placeholder="Beachfront, investment property, retirement home...">
+        </div>
+      </div>
+      <button type="submit" class="btn">Send My Alert Request</button>
+      <div class="alert-note">This opens an email to HASS GROUP with your details — we'll follow up personally.</div>
+    </form>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="foot-actions">
+      <a class="foot-action" href="tel:18058880133">Call us ↗</a>
+      <a class="foot-action" href="mailto:hassgroupusa@gmail.com">Inquire Now ↗</a>
+      <a class="foot-action" href="mailto:hassgroupusa@gmail.com">Send a Message ↗</a>
+    </div>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">HASS GROUP USA</div>
+        <div class="foot-dre">DRE: 01894430<br>LPT REALTY: 02248983</div>
+        <p>Licensed since 2012, HASS GROUP turns California's toughest markets into winning deals. Backed by real data, predictive strategy, and elite local expertise, we help clients buy and sell with precision, speed, and profit.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="international.html">International</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <ul>
+          <li><a href="#contact">Buy with HASS</a></li>
+          <li><a href="#contact">Sell with HASS</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="#contact">Our Locations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Information</h4>
+        <ul>
+          <li>9452 Telephone Road Suite 210, Ventura CA 93004, United States</li>
+          <li>2108 N ST STE N, Sacramento CA 95816, United States</li>
+          <li><a href="mailto:hassgroupusa@gmail.com">hassgroupusa@gmail.com</a></li>
+          <li><a href="tel:18058880133">(805) 888-0133</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <span>All Rights Reserved HASS Group USA</span>
+      <span>&copy; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var buttons = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('.listing-card');
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        buttons.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        var f = btn.getAttribute('data-filter');
+        cards.forEach(function(card){
+          var region = card.getAttribute('data-region');
+          card.classList.toggle('hide', f !== 'all' && f !== region);
+        });
+      });
+    });
+
+    var form = document.getElementById('alertForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('af-name').value;
+      var email = document.getElementById('af-email').value;
+      var region = document.getElementById('af-region').value;
+      var budget = document.getElementById('af-budget').value;
+      var notes = document.getElementById('af-notes').value;
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\nRegion of interest: ' + region +
+                 '\nTarget budget: ' + budget + '\nLooking for: ' + notes;
+      var mailto = 'mailto:hassgroupusa@gmail.com?subject=' + encodeURIComponent('Property Alert Request — ' + region) +
+                   '&body=' + encodeURIComponent(body);
+      window.location.href = mailto;
+    });
+  })();
+</script>
+
+</body>
+</html>
