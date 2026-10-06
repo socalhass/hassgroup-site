@@ -50,6 +50,24 @@
   .notice p{color:#44565f;font-size:.92rem;}
   .notice strong{color:var(--navy);}
 
+  .featured{padding:70px 0 0;}
+  .feat-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 14px 40px rgba(15,42,61,.1);display:grid;grid-template-columns:1.1fr 1fr;}
+  .feat-gallery{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;min-height:340px;}
+  .feat-gallery img{width:100%;height:100%;object-fit:cover;}
+  .feat-gallery a:first-child{grid-row:1/3;}
+  .feat-body{padding:38px 40px;display:flex;flex-direction:column;justify-content:center;}
+  .feat-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .feat-tag{background:var(--rust);color:#fff;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;font-weight:600;}
+  .feat-body h3{font-size:1.6rem;margin-bottom:4px;}
+  .feat-loc{color:#7c8a8f;font-size:.88rem;margin-bottom:18px;}
+  .feat-specs{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:18px;}
+  .feat-specs div{font-size:.84rem;color:#44565f;}
+  .feat-specs strong{display:block;color:var(--navy);font-family:'Playfair Display',serif;font-size:1.05rem;}
+  .feat-body p.desc{color:#50626a;font-size:.92rem;margin-bottom:22px;}
+  .feat-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .feat-listed-by{margin-top:18px;font-size:.78rem;color:#8a97a0;}
+  @media(max-width:860px){.feat-card{grid-template-columns:1fr;}.feat-gallery{min-height:260px;}}
+
   .browse{padding:80px 0 100px;}
   .filter-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:40px 0 46px;}
   .filter-btn{background:#fff;border:1px solid rgba(15,42,61,.12);color:var(--navy);padding:9px 18px;border-radius:30px;font-family:inherit;font-size:.85rem;cursor:pointer;transition:.2s;}
@@ -134,6 +152,41 @@
     <p><strong>How this works:</strong> HASS GROUP curates listings and off-market opportunities directly for serious buyers and investors, rather than running a public search tool. The cards below reflect the real markets and current conditions we're tracking — reach out and we'll send you the specific properties available right now in the area you're interested in.</p>
   </div>
 </div>
+
+<section class="featured">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Featured Investment Property</div>
+      <h2>113 N Alvarado St, Ojai (Meiners Oaks)</h2>
+      <p>A HASS GROUP-owned investment opportunity, offered directly.</p>
+    </div>
+
+    <div class="feat-card">
+      <div class="feat-gallery">
+        <a href="img/VCV-Alvarado-06.jpg" target="_blank"><img src="img/VCV-Alvarado-06.jpg" alt="Living room and kitchen at 113 N Alvarado St, Ojai"></a>
+        <a href="img/VCV-Alvarado-09.jpg" target="_blank"><img src="img/VCV-Alvarado-09.jpg" alt="Fireplace sitting nook at 113 N Alvarado St, Ojai"></a>
+        <a href="img/VCV-Alvarado-20.jpg" target="_blank"><img src="img/VCV-Alvarado-20.jpg" alt="Private deck at 113 N Alvarado St, Ojai"></a>
+      </div>
+      <div class="feat-body">
+        <div class="feat-eyebrow"><span class="feat-tag">Income Property</span></div>
+        <h3>Two-Unit Income Property in the Heart of Meiners Oaks</h3>
+        <div class="feat-loc">Ojai, CA · Ventura County</div>
+        <div class="feat-specs">
+          <div><strong>2 Units</strong>Main house + lower unit</div>
+          <div><strong>Fully Leased</strong>Occupied, cash-flowing</div>
+          <div><strong>~$7–8K/mo</strong>Combined gross rent</div>
+          <div><strong>Walkable</strong>Steps to downtown Ojai</div>
+        </div>
+        <p class="desc">A renovated multi-unit property producing consistent rental income in one of Ojai's most walkable pockets — steps from downtown shops and restaurants, the Ojai Trolley stop, and the Ventura River Preserve trailheads. Quartz kitchen, hardwood floors, a stone fireplace, and private outdoor space. Offered directly by the owner — serious inquiries receive full financials, photos, and showing availability.</p>
+        <div class="feat-actions">
+          <a href="mailto:hassgroupusa@gmail.com?subject=113%20N%20Alvarado%20St%20-%20Investment%20Inquiry" class="btn rust">Request Investment Details</a>
+          <a href="tel:18058880133" class="btn" style="background:transparent;border:1px solid rgba(15,42,61,.18);color:var(--navy);">Call (805) 888-0133</a>
+        </div>
+        <div class="feat-listed-by">Offered by HASS GROUP USA, in affiliation with LPT Realty · DRE 01894430</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="browse">
   <div class="container">
