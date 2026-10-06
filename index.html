@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HASS GROUP USA | Southern California Real Estate</title>
+<meta name="description" content="HASS GROUP USA — licensed since 2012. Buy, sell, remodel, and manage property across Ventura, Santa Barbara, Montecito, Malibu, Calabasas, Thousand Oaks and Ojai.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -30,7 +31,7 @@
   .btn{
     display:inline-block;background:var(--teal-light);color:#fff;
     padding:14px 30px;border-radius:30px;font-weight:500;letter-spacing:.02em;
-    transition:background .2s;
+    transition:background .2s;border:none;cursor:pointer;font-family:inherit;font-size:.95rem;
   }
   .btn:hover{background:var(--teal);}
   .btn.rust{background:var(--rust);}
@@ -44,39 +45,34 @@
   header .container{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
   .logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;color:var(--navy);letter-spacing:.02em;}
   .logo span{color:var(--rust);}
-  nav ul{list-style:none;display:flex;gap:28px;font-size:.92rem;}
+  nav ul{list-style:none;display:none;gap:24px;font-size:.88rem;}
   nav a:hover{color:var(--teal);}
   .nav-cta{display:none;}
-  @media(min-width:860px){.nav-cta{display:inline-block;}}
+  @media(min-width:900px){nav ul{display:flex;}.nav-cta{display:inline-block;}}
 
   /* Hero */
   .hero{
-    position:relative;min-height:88vh;display:flex;align-items:flex-end;
-    background:linear-gradient(180deg,rgba(15,42,61,.35),rgba(15,42,61,.75)),url('img/hero.jpg') center/cover no-repeat;
+    position:relative;min-height:90vh;display:flex;align-items:flex-end;
+    background:linear-gradient(180deg,rgba(15,42,61,.35),rgba(15,42,61,.8)),url('img/hero.jpg') center/cover no-repeat;
   }
   .hero-inner{color:#fff;padding:60px 0 80px;}
-  .hero h1{color:#fff;font-size:clamp(2rem,5vw,3.4rem);max-width:820px;line-height:1.15;margin-bottom:22px;}
-  .hero p.lede{max-width:560px;font-size:1.05rem;opacity:.9;margin-bottom:28px;}
+  .hero h1{color:#fff;font-size:clamp(2rem,5vw,3.6rem);max-width:860px;line-height:1.12;margin-bottom:22px;}
+  .hero p.lede{max-width:620px;font-size:1.08rem;opacity:.92;margin-bottom:28px;}
+  .hero .btnrow{display:flex;gap:14px;flex-wrap:wrap;}
 
-  /* Intro */
-  .intro{padding:90px 0;text-align:center;}
+  /* Section heading helper */
   .eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--rust);font-weight:600;margin-bottom:10px;}
-  .intro h2{font-size:clamp(1.8rem,3.5vw,2.6rem);max-width:760px;margin:0 auto 20px;}
-  .intro p{max-width:640px;margin:0 auto 26px;color:#44565f;}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 20px;}
+  .section-head p{color:#44565f;max-width:640px;margin:14px auto 0;}
 
-  /* Three cards: Buy/Sell/Rent */
+  /* Intro / Buy-Sell-Rent */
+  .intro{padding:90px 0 20px;text-align:center;}
+  .intro h2{font-size:clamp(1.8rem,3.5vw,2.6rem);}
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;padding:40px 0 100px;}
   .card{background:#fff;border-radius:14px;padding:38px 32px;box-shadow:0 10px 30px rgba(15,42,61,.06);border-top:4px solid var(--teal-light);}
   .card h3{font-size:1.4rem;margin-bottom:12px;}
   .card p{color:#50626a;margin-bottom:20px;font-size:.95rem;}
   .card a{color:var(--teal);font-weight:600;font-size:.9rem;}
-
-  /* Solutions band */
-  .solutions{background:var(--navy);color:#fff;padding:100px 0;}
-  .solutions .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-  .solutions h2{color:#fff;font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:18px;}
-  .solutions p{color:#c7d4d8;margin-bottom:24px;}
-  @media(max-width:800px){.solutions .container{grid-template-columns:1fr;}}
 
   /* Featured Luxury Properties */
   .luxury{padding:100px 0;}
@@ -94,30 +90,77 @@
   .property-row .pr-text a{font-size:.82rem;opacity:.9;}
   @media(max-width:800px){.luxury-grid{grid-template-columns:1fr;}}
 
-  /* Gain section */
-  .gain{padding:100px 0;text-align:center;background:#fff;}
-  .gain h2{font-size:clamp(1.8rem,3.5vw,2.6rem);max-width:720px;margin:0 auto 18px;}
-  .gain p{max-width:600px;margin:0 auto 40px;color:#44565f;}
-  .gain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:36px;max-width:900px;margin:0 auto 46px;text-align:left;}
-  .gain-item{display:flex;gap:14px;align-items:flex-start;}
-  .gain-icon{width:44px;height:44px;border-radius:50%;background:var(--cream);border:1px solid var(--teal-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2rem;}
-  .gain-item strong{display:block;color:var(--teal);font-size:1rem;}
-  .gain-item span{font-size:.85rem;color:#6a7a81;}
+  /* Sell Faster band */
+  .pattern{background:#fff;padding:100px 0;text-align:center;}
+  .pattern h2{font-size:clamp(1.8rem,3.5vw,2.6rem);max-width:760px;margin:0 auto 18px;}
+  .pattern p{max-width:680px;margin:0 auto 16px;color:#44565f;}
+  .pattern .tagline{font-family:'Playfair Display',serif;color:var(--teal);font-size:1.2rem;margin:26px 0;}
 
-  /* Cities */
-  .cities{background:var(--teal-light);padding:100px 0;text-align:center;}
-  .cities h2{color:#fff;font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:44px;}
-  .city-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-  .city{position:relative;border-radius:12px;overflow:hidden;height:180px;}
-  .city img{width:100%;height:100%;object-fit:cover;}
-  .city::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,42,61,.75),transparent 60%);}
-  .city span{position:absolute;bottom:14px;left:16px;color:#fff;font-weight:600;font-family:'Playfair Display',serif;font-size:1.1rem;z-index:1;}
+  /* Stats band */
+  .stats{background:var(--navy);color:#fff;padding:90px 0;text-align:center;}
+  .stats .eyebrow{color:#e4b9ab;}
+  .stats h2{color:#fff;font-size:clamp(1.8rem,3.5vw,2.5rem);max-width:760px;margin:0 auto 16px;}
+  .stats>.container>p{max-width:680px;margin:0 auto 50px;color:#c7d4d8;}
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:30px;}
+  .stat-item strong{display:block;font-family:'Playfair Display',serif;font-size:2.1rem;color:#fff;}
+  .stat-item span{font-size:.85rem;color:#9fb3b8;letter-spacing:.02em;}
+
+  /* Solutions / services */
+  .solutions{padding:100px 0;}
+  .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px;margin-top:46px;}
+  .service-card{background:#fff;border-radius:14px;padding:34px 28px;box-shadow:0 10px 30px rgba(15,42,61,.06);}
+  .service-card h3{font-size:1.25rem;margin-bottom:12px;color:var(--teal);}
+  .service-card p{color:#50626a;font-size:.93rem;}
+  .solutions .cta-wrap{text-align:center;margin-top:50px;}
+
+  /* Gain section */
+  .gain{padding:100px 0;text-align:center;background:var(--navy);color:#fff;}
+  .gain h2{color:#fff;font-size:clamp(1.8rem,3.5vw,2.6rem);max-width:720px;margin:0 auto 18px;}
+  .gain>.container>p{max-width:640px;margin:0 auto 40px;color:#c7d4d8;}
+  .gain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:1000px;margin:0 auto 46px;text-align:left;}
+  .gain-item{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.06);padding:20px;border-radius:12px;}
+  .gain-icon{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;}
+  .gain-item span{font-size:.9rem;color:#e7edee;}
 
   /* CTA band */
   .cta-band{padding:110px 0;text-align:center;}
   .cta-band h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:760px;margin:0 auto 22px;}
   .cta-band p{max-width:620px;margin:0 auto 14px;color:#44565f;}
   .cta-band .btn{margin-top:26px;}
+
+  /* Markets / cities */
+  .markets{background:#fff;padding:100px 0;}
+  .market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin-top:46px;}
+  .market-card{position:relative;border-radius:16px;overflow:hidden;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;}
+  .market-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .market-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,61,.1),rgba(15,42,61,.92));}
+  .market-card .mc-text{position:relative;z-index:1;padding:26px;}
+  .market-card h3{color:#fff;font-size:1.3rem;margin-bottom:8px;}
+  .market-card .mc-stat{font-size:.82rem;color:#e4b9ab;font-weight:600;letter-spacing:.02em;margin-bottom:8px;}
+  .market-card p{font-size:.88rem;color:#dbe4e6;}
+
+  /* Team */
+  .team{padding:100px 0;text-align:center;}
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;margin-top:46px;text-align:left;}
+  .team-card{background:#fff;border-radius:14px;padding:34px 28px;box-shadow:0 10px 30px rgba(15,42,61,.06);}
+  .team-avatar{width:56px;height:56px;border-radius:50%;background:var(--teal-light);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;margin-bottom:18px;}
+  .team-card h3{font-size:1.1rem;margin-bottom:2px;}
+  .team-role{color:var(--rust);font-size:.82rem;font-weight:600;letter-spacing:.02em;text-transform:uppercase;margin-bottom:14px;display:block;}
+  .team-card p{color:#50626a;font-size:.9rem;}
+
+  /* Testimonials */
+  .testimonials{background:var(--teal-light);padding:100px 0;text-align:center;}
+  .testimonials h2{color:#fff;}
+  .testimonials>.container>p{color:#eef4f5;max-width:600px;margin:14px auto 50px;}
+  .t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+  .t-card{background:#fff;border-radius:14px;padding:30px 26px;text-align:left;}
+  .t-card p{font-style:italic;color:#2c3e44;font-size:.95rem;margin-bottom:16px;}
+  .t-card span{font-weight:600;color:var(--teal);font-size:.85rem;}
+
+  /* Community band */
+  .community{padding:100px 0;text-align:center;}
+  .community h2{font-size:clamp(1.8rem,3.5vw,2.4rem);max-width:720px;margin:0 auto 18px;}
+  .community p{max-width:680px;margin:0 auto 26px;color:#44565f;}
 
   /* Footer */
   footer{background:var(--navy);color:#cfd9dc;padding-top:60px;}
@@ -144,79 +187,64 @@
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="#properties">Properties</a></li>
-        <li><a href="#areas">Areas</a></li>
+        <li><a href="#solutions">Services</a></li>
+        <li><a href="#markets">Markets</a></li>
+        <li><a href="#team">Team</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a href="#contact" class="btn nav-cta">Let's Begin</a>
+    <a href="#contact" class="btn nav-cta">Partner with HASS</a>
   </div>
 </header>
 
 <section class="hero" id="home">
   <div class="container hero-inner">
-    <div class="eyebrow" style="color:#e4b9ab">Since 2012</div>
-    <h1>HASS GROUP turns California's toughest markets into winning deals.</h1>
-    <p class="lede">Driven by data, strategy, and local expertise for fast, profitable results.</p>
-    <a href="#contact" class="btn rust">Let's Begin</a>
+    <div class="eyebrow" style="color:#e4b9ab">Licensed Since 2012</div>
+    <h1>Buy. Remodel. Flip. Sell. All Powered by HASS.</h1>
+    <p class="lede">HASS GROUP turns California's toughest markets into winning deals. Backed by real data, predictive strategy, and elite local expertise, we help clients buy and sell with precision, speed, and profit. From Ventura to Montecito, every transaction is a calculated success story.</p>
+    <div class="btnrow">
+      <a href="#contact" class="btn rust">Partner with HASS</a>
+    </div>
   </div>
 </section>
 
 <section class="intro" id="about">
   <div class="container">
-    <div class="eyebrow">Introduction</div>
-    <h2>HASS GROUP turns California's toughest markets into winning deals.</h2>
-    <p>Backed by real data, predictive strategy, and elite local expertise, we help clients buy and sell with precision.</p>
-    <a href="#contact" class="btn">Learn more about us</a>
+    <div class="eyebrow">What We Do</div>
+    <h2>Comprehensive real estate, built around you.</h2>
   </div>
 
   <div class="container cards">
     <div class="card">
-      <h3>Buy Property</h3>
+      <h3>Buy a Property</h3>
       <p>When others are still searching, you're already closing. Get early access to off-market listings, insider data, and negotiations led by the best in the business.</p>
       <a href="#contact">Consult now →</a>
     </div>
     <div class="card">
-      <h3>Sell Property</h3>
-      <p>We don't wait for buyers. We predict them. Smarter pricing, perfect timing, and marketing that makes your home impossible to ignore &amp; sell out immediately.</p>
+      <h3>Sell Your Property</h3>
+      <p>We don't wait for buyers. We predict them. Smarter pricing, perfect timing, and marketing that makes your home impossible to ignore.</p>
       <a href="#contact">Consult now →</a>
     </div>
     <div class="card">
-      <h3>Rent Property</h3>
-      <p>Your rental should work for you, not worry you. We find reliable tenants, optimize rental value, and manage every detail while you enjoy steady income and peace of mind.</p>
+      <h3>Property Management</h3>
+      <p>Your property should perform like an investment, not a chore. We protect, optimize, and grow your assets while you sit back and collect results.</p>
       <a href="#contact">Consult now →</a>
     </div>
-  </div>
-</section>
-
-<section class="solutions">
-  <div class="container">
-    <div>
-      <div class="eyebrow" style="color:#e4b9ab">All Powered by HASS</div>
-      <h2>Comprehensive Real Estate Solutions</h2>
-      <p>At HASS GROUP USA Premier, every deal is precision engineered for one goal: bigger returns, faster. We don't just move properties. We move markets.</p>
-      <a href="#contact" class="btn rust">Partner with HASS</a>
-    </div>
-    <img src="img/california.jpg" alt="Southern California coastal estate" style="border-radius:14px;">
   </div>
 </section>
 
 <section class="luxury" id="properties">
   <div class="container">
-    <div class="eyebrow">Featured Luxury</div>
-    <h2>Properties</h2>
+    <div class="eyebrow">Featured Luxury Properties</div>
+    <h2>Discover Our Signature Listings</h2>
     <div class="luxury-grid">
       <div class="luxury-copy">
         <img src="img/image1.jpg" alt="Luxury hillside villa" style="border-radius:14px;margin-bottom:24px;">
         <p>From Ventura's coastal anchors to Montecito's ultra-private estates and Ojai's designer retreats, HASS GROUP curates the kind of properties that move markets. Each one is verified, data-backed, and strategically positioned to sell faster, appreciate faster, and pay off bigger.</p>
-        <a href="#about" class="btn">Learn More About Us</a>
+        <a href="#contact" class="btn">Discover Our Signature Listings</a>
       </div>
       <div class="property-list">
-        <div class="property-row">
-          <img src="img/malibu.jpg" alt="Malibu">
-          <div class="pr-text"><strong>Malibu</strong><a href="#contact">View Properties →</a></div>
-        </div>
         <div class="property-row">
           <img src="img/ventura.jpg" alt="Ventura Beachfront Estates">
           <div class="pr-text"><strong>Ventura Beachfront Estates</strong><a href="#contact">View Properties →</a></div>
@@ -234,34 +262,73 @@
   </div>
 </section>
 
-<section class="gain">
+<section class="pattern">
   <div class="container">
-    <h2>Behind Southern California's Smartest Real Estate Moves</h2>
-    <p>When you partner with HASS GROUP USA Premier, you don't just get an agent. You get an advantage. We use data, timing, and precision strategy to make every move count.</p>
-    <h3 style="margin-bottom:30px;">Here is What You Gain:</h3>
-    <div class="gain-grid">
-      <div class="gain-item"><div class="gain-icon">⏱</div><div><strong>Timing</strong><span>Perfect timing for every sale</span></div></div>
-      <div class="gain-item"><div class="gain-icon">🏠</div><div><strong>Renovation</strong><span>Strategic renovation guidance</span></div></div>
-      <div class="gain-item"><div class="gain-icon">💲</div><div><strong>Pricing</strong><span>AI powered pricing strategy</span></div></div>
-      <div class="gain-item"><div class="gain-icon">🔑</div><div><strong>Access</strong><span>Access to elite lenders and contractors</span></div></div>
-      <div class="gain-item"><div class="gain-icon">🔍</div><div><strong>Optimization</strong><span>Tax and profit optimization</span></div></div>
-    </div>
-    <a href="#contact" class="btn">Start Winning Today</a>
+    <div class="eyebrow">HASS GROUP USA Premier</div>
+    <h2>Sell Faster. Earn More. Dominate the Market.</h2>
+    <p>At HASS GROUP USA Premier, results aren't a promise. They're a pattern. Every sale is powered by precision, strategy, and elite market intelligence. Our proprietary AI studies millions of data points to predict buyer behavior before the competition even sees it coming.</p>
+    <p>The outcome? Homes listed with HASS sell <strong>20% faster</strong> and for <strong>6% more</strong> than the Southern California average.</p>
+    <div class="tagline">Others chase the market. We own it.</div>
+    <a href="#contact" class="btn rust">How It Works</a>
   </div>
 </section>
 
-<section class="cities" id="areas">
+<section class="stats">
   <div class="container">
-    <h2>Properties By Cities</h2>
-    <div class="city-grid">
-      <div class="city"><img src="img/ventura.jpg" alt="Ventura"><span>Ventura</span></div>
-      <div class="city"><img src="img/ojai.jpg" alt="Ojai"><span>Ojai</span></div>
-      <div class="city"><img src="img/santabarbara.jpg" alt="Santa Barbara"><span>Santa Barbara</span></div>
-      <div class="city"><img src="img/carpenteria.jpg" alt="Carpenteria"><span>Carpenteria</span></div>
-      <div class="city"><img src="img/montecito-area.jpg" alt="Montecito"><span>Montecito</span></div>
-      <div class="city"><img src="img/malibu.jpg" alt="Malibu"><span>Malibu</span></div>
-      <div class="city"><img src="img/thousandoaks.jpg" alt="Thousand Oaks"><span>Thousand Oaks</span></div>
-      <div class="city"><img src="img/oxnard.jpg" alt="Oxnard"><span>Oxnard</span></div>
+    <div class="eyebrow">We Don't Just Play The Game. We Own It.</div>
+    <h2>Power in real estate isn't about listings. It's about control.</h2>
+    <p>HASS GROUP USA Premier dominates Southern California's prime markets with precision pricing, perfect timing, and unmatched execution. Every result below is real, earned, and repeatable.</p>
+    <div class="stat-grid">
+      <div class="stat-item"><strong>14,000+</strong><span>Active Properties</span></div>
+      <div class="stat-item"><strong>13</strong><span>Years of Market Command</span></div>
+      <div class="stat-item"><strong>5,000+</strong><span>Investors Served</span></div>
+      <div class="stat-item"><strong>9 Days</strong><span>Average to Sell</span></div>
+      <div class="stat-item"><strong>6%</strong><span>Above Asking Price</span></div>
+      <div class="stat-item"><strong>400+</strong><span>Homes Closed in 2025</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="solutions" id="solutions">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">All Powered by HASS</div>
+      <h2>Comprehensive Real Estate Solutions</h2>
+      <p>At HASS GROUP USA Premier, every deal is precision engineered for one goal: bigger returns, faster. We don't just move properties. We move markets.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Sell Your Property</h3>
+        <p>We don't wait for buyers. We predict them. Smarter pricing, perfect timing, and marketing that makes your home impossible to ignore.</p>
+      </div>
+      <div class="service-card">
+        <h3>Buy a Property</h3>
+        <p>When others are still searching, you're already closing. Get early access to off-market listings, insider data, and negotiations led by the best in the business.</p>
+      </div>
+      <div class="service-card">
+        <h3>Property Management</h3>
+        <p>Your property should perform like an investment, not a chore. We protect, optimize, and grow your assets while you sit back and collect results.</p>
+      </div>
+      <div class="service-card">
+        <h3>Property Consultation</h3>
+        <p>Want to play the market like a pro? We guide every renovation, sale, and strategy move to maximize ROI and minimize risk, all backed by real data, not guesswork.</p>
+      </div>
+    </div>
+    <div class="cta-wrap"><a href="#contact" class="btn rust">Book a Private Consultation</a></div>
+  </div>
+</section>
+
+<section class="gain">
+  <div class="container">
+    <div class="eyebrow" style="color:#e4b9ab">Behind Southern California's Smartest Real Estate Moves</div>
+    <h2>You don't just get an agent. You get an advantage.</h2>
+    <p>We use data, timing, and precision strategy to make every move count. Here's what you gain:</p>
+    <div class="gain-grid">
+      <div class="gain-item"><div class="gain-icon">⏱</div><span>Perfect timing for every sale</span></div>
+      <div class="gain-item"><div class="gain-icon">🏠</div><span>Strategic renovation guidance</span></div>
+      <div class="gain-item"><div class="gain-icon">📦</div><span>Full relocation support</span></div>
+      <div class="gain-item"><div class="gain-icon">🔑</div><span>Access to elite lenders and contractors</span></div>
+      <div class="gain-item"><div class="gain-icon">💲</div><span>Tax and profit optimization</span></div>
     </div>
   </div>
 </section>
@@ -271,7 +338,127 @@
     <h2>Every Day You Wait, Someone Else Wins.</h2>
     <p>In Southern California real estate, timing is everything and hesitation is expensive. While others think, HASS GROUP clients close. Our data tells us where the money moves before the market catches on.</p>
     <p>Every listing we touch sells faster. Every investor we guide earns more. The question isn't if it works, it's how long you'll wait to start winning.</p>
-    <a href="#contact" class="btn rust">Start Winning Today</a>
+    <a href="#contact" class="btn rust">Start Winning Now</a>
+  </div>
+</section>
+
+<section class="markets" id="markets">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Step Inside Power Markets. City by City.</div>
+      <h2>Where the Smartest Investors Are Moving Next</h2>
+      <p>Southern California's next wave of growth is being predicted, positioned, and executed by HASS GROUP USA Premier. If you're buying, selling, or expanding your portfolio, these are the markets where opportunity is unfolding right now.</p>
+    </div>
+    <div class="market-grid">
+      <div class="market-card">
+        <img src="img/ventura.jpg" alt="Ventura County">
+        <div class="mc-text">
+          <h3>Ventura County</h3>
+          <div class="mc-stat">Median $870K · 1,500+ homes · 57 days on market</div>
+          <p>The competition has cooled, but the fundamentals are strong. Strategic buyers are stepping in now, before the next price climb.</p>
+        </div>
+      </div>
+      <div class="market-card">
+        <img src="img/santabarbara.jpg" alt="Santa Barbara County">
+        <div class="mc-text">
+          <h3>Santa Barbara County</h3>
+          <div class="mc-stat">Median $2.9M · up 28% in one year</div>
+          <p>Inventory is growing, and serious buyers still pay above asking for the right property.</p>
+        </div>
+      </div>
+      <div class="market-card">
+        <img src="img/montecito-area.jpg" alt="Montecito">
+        <div class="mc-text">
+          <h3>Montecito</h3>
+          <div class="mc-stat">Median near $10.85M · inventory up 20%</div>
+          <p>Buyers with capital are quietly gaining control as sellers adjust expectations.</p>
+        </div>
+      </div>
+      <div class="market-card">
+        <img src="img/malibu.jpg" alt="Malibu">
+        <div class="mc-text">
+          <h3>Malibu</h3>
+          <div class="mc-stat">Inventory rising</div>
+          <p>Top properties are still going fast. This is where vision meets velocity.</p>
+        </div>
+      </div>
+      <div class="market-card">
+        <img src="img/calabasas.jpg" alt="Calabasas">
+        <div class="mc-text">
+          <h3>Calabasas</h3>
+          <div class="mc-stat">Up 7.2% to $4.9M</div>
+          <p>Gated exclusivity, celebrity appeal, and high sustainability demand keep it hot even as listings tighten.</p>
+        </div>
+      </div>
+      <div class="market-card">
+        <img src="img/thousandoaks.jpg" alt="Thousand Oaks and Ojai">
+        <div class="mc-text">
+          <h3>Thousand Oaks &amp; Ojai</h3>
+          <div class="mc-stat">Inventory up</div>
+          <p>Buyers are pivoting here for value, privacy, and appreciation potential, before attention shifts inland.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Meet the Team</div>
+      <h2>Excellence isn't built by chance.</h2>
+      <p>The HASS GROUP team combines technology, market intelligence, and creative strategy to move properties faster and smarter across Southern California.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">R</div>
+        <h3>Rohail</h3>
+        <span class="team-role">Chief Technical Officer</span>
+        <p>The architect behind our data systems and AI-driven insights. Rohail turns raw market data into precision tools that help us predict trends and outperform the competition.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">A</div>
+        <h3>Ayesha</h3>
+        <span class="team-role">Director of Communications</span>
+        <p>The voice of HASS GROUP and the strategist behind our storytelling. Ayesha ensures every listing, brand message, and negotiation reflects the clarity and confidence our clients expect.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">TC</div>
+        <h3>The Closer</h3>
+        <span class="team-role">Lead Negotiator</span>
+        <p>A results-first dealmaker with an unmatched record of success. He turns hesitation into action and delivers outcomes that redefine what clients think is possible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2>We Are Trusted. Respected. Recommended.</h2>
+    <p>Every deal tells a story, and every client reminds us why precision and trust will always matter most.</p>
+    <div class="t-grid">
+      <div class="t-card">
+        <p>"HASS GROUP sold my Ventura home in 8 days for 11% above asking. Their strategy worked exactly as promised."</p>
+        <span>— Lina M., Doha</span>
+      </div>
+      <div class="t-card">
+        <p>"They turned my Ojai property from a slow listing into a bidding war. Closed in two weeks, all cash."</p>
+        <span>— Daniel T., London</span>
+      </div>
+      <div class="t-card">
+        <p>"HASS GROUP analyzed the data, adjusted our price, and found the perfect buyer within days. We made $130K more than expected."</p>
+        <span>— Maya S., Los Angeles</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="community">
+  <div class="container">
+    <div class="eyebrow">Locally Grown. Community Driven.</div>
+    <h2>Ventura County has been home since 1979.</h2>
+    <p>Long before the world realized how special this place truly is, we were building relationships that go far beyond property lines. Our success is powered by partnership — by supporting those who keep Ventura County vibrant, authentic, and thriving.</p>
+    <a href="#contact" class="btn">Explore Our Community Partners</a>
   </div>
 </section>
 
@@ -292,18 +479,18 @@
         <h4>Main Page</h4>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Buy with HASS</a></li>
-          <li><a href="#contact">Sell with HASS</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#solutions">Services</a></li>
+          <li><a href="#markets">Markets</a></li>
         </ul>
       </div>
       <div>
         <h4>&nbsp;</h4>
         <ul>
-          <li><a href="#properties">Buy Property</a></li>
-          <li><a href="#properties">Sell Property</a></li>
-          <li><a href="#properties">Rent Property</a></li>
-          <li><a href="#areas">Our Locations</a></li>
+          <li><a href="#contact">Buy with HASS</a></li>
+          <li><a href="#contact">Sell with HASS</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#contact">Our Locations</a></li>
         </ul>
       </div>
       <div>
@@ -317,7 +504,7 @@
       </div>
     </div>
     <div class="bottom-bar">
-      <span>All Right Reserved HASS Group By USA</span>
+      <span>All Rights Reserved HASS Group USA</span>
       <span>&copy; 2026</span>
     </div>
   </div>
