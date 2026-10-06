@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About HASS GROUP USA | Southern California Real Estate</title>
+<meta name="description" content="HASS GROUP USA — licensed since 2012. Meet the team behind Southern California's data-driven real estate firm, our mission, and our global presence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2a3d;
+    --teal:#2e6069;
+    --teal-light:#7fa7ac;
+    --cream:#faf8f4;
+    --ink:#1c2b33;
+    --rust:#c0604a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--navy);}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-block;background:var(--teal-light);color:#fff;padding:14px 30px;border-radius:30px;font-weight:500;letter-spacing:.02em;transition:background .2s;border:none;cursor:pointer;font-family:inherit;font-size:.95rem;}
+  .btn:hover{background:var(--teal);}
+  .btn.rust{background:var(--rust);}
+  .btn.rust:hover{background:#a34d39;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.95);backdrop-filter:blur(6px);border-bottom:1px solid rgba(15,42,61,.08);}
+  header .container{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;color:var(--navy);letter-spacing:.02em;}
+  .logo span{color:var(--rust);}
+  nav ul{list-style:none;display:none;gap:24px;font-size:.88rem;}
+  nav a:hover{color:var(--teal);}
+  .nav-cta{display:none;}
+  @media(min-width:900px){nav ul{display:flex;}.nav-cta{display:inline-block;}}
+
+  .page-hero{position:relative;min-height:46vh;display:flex;align-items:center;background:linear-gradient(180deg,rgba(15,42,61,.55),rgba(15,42,61,.85)),url('img/california.jpg') center/cover no-repeat;color:#fff;padding:70px 0;}
+  .page-hero h1{color:#fff;font-size:clamp(1.9rem,4.5vw,3.2rem);max-width:760px;margin-bottom:16px;}
+  .page-hero p{max-width:600px;opacity:.92;font-size:1.05rem;}
+
+  .eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--rust);font-weight:600;margin-bottom:10px;}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 20px;}
+  .section-head p{color:#44565f;max-width:640px;margin:14px auto 0;}
+
+  .story{padding:100px 0;}
+  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .story-copy p{color:#44565f;margin-bottom:18px;}
+  .story-tagline{font-family:'Playfair Display',serif;color:var(--teal);font-size:1.3rem;margin-top:22px;font-style:italic;}
+  .story-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .story-stat{background:#fff;border-radius:14px;padding:26px 22px;box-shadow:0 10px 30px rgba(15,42,61,.06);border-top:4px solid var(--teal-light);}
+  .story-stat strong{display:block;font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--navy);}
+  .story-stat span{font-size:.82rem;color:#50626a;}
+  @media(max-width:860px){.story-grid{grid-template-columns:1fr;}}
+
+  .mission{background:var(--navy);color:#fff;padding:100px 0;text-align:center;}
+  .mission .eyebrow{color:#e4b9ab;}
+  .mission h2{color:#fff;font-size:clamp(1.8rem,3.5vw,2.5rem);max-width:760px;margin:0 auto 20px;}
+  .mission p{max-width:680px;margin:0 auto;color:#c7d4d8;font-size:1.05rem;}
+  .mission .motto{font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;margin-top:30px;}
+
+  .presence{padding:100px 0;text-align:center;}
+  .presence-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:46px;text-align:left;}
+  .presence-card{background:#fff;border-radius:14px;padding:34px 28px;box-shadow:0 10px 30px rgba(15,42,61,.06);border-top:4px solid var(--rust);}
+  .presence-card h3{font-size:1.2rem;margin-bottom:10px;color:var(--teal);}
+  .presence-card p{color:#50626a;font-size:.93rem;}
+
+  .team{padding:100px 0;text-align:center;background:#fff;}
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;margin-top:46px;text-align:left;}
+  .team-card{background:var(--cream);border-radius:14px;padding:34px 28px;box-shadow:0 10px 30px rgba(15,42,61,.05);}
+  .team-avatar{width:56px;height:56px;border-radius:50%;background:var(--teal-light);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;margin-bottom:18px;}
+  .team-card h3{font-size:1.1rem;margin-bottom:2px;}
+  .team-role{color:var(--rust);font-size:.82rem;font-weight:600;letter-spacing:.02em;text-transform:uppercase;margin-bottom:14px;display:block;}
+  .team-card p{color:#50626a;font-size:.9rem;}
+
+  .testimonials{background:var(--teal-light);padding:100px 0;text-align:center;}
+  .testimonials h2{color:#fff;}
+  .testimonials>.container>p{color:#eef4f5;max-width:600px;margin:14px auto 50px;}
+  .t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+  .t-card{background:#fff;border-radius:14px;padding:30px 26px;text-align:left;}
+  .t-card p{font-style:italic;color:#2c3e44;font-size:.95rem;margin-bottom:16px;}
+  .t-card span{font-weight:600;color:var(--teal);font-size:.85rem;}
+
+  .cta-band{padding:110px 0;text-align:center;}
+  .cta-band h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:760px;margin:0 auto 22px;}
+  .cta-band p{max-width:620px;margin:0 auto 14px;color:#44565f;}
+  .cta-band .btn{margin-top:26px;}
+
+  footer{background:var(--navy);color:#cfd9dc;padding-top:60px;}
+  .foot-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:50px;}
+  .foot-action{background:rgba(255,255,255,.06);border-radius:14px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;font-family:'Playfair Display',serif;font-weight:600;color:#fff;}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1.3fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-grid h4{color:#fff;font-size:.95rem;margin-bottom:16px;letter-spacing:.03em;}
+  .foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:.88rem;}
+  .foot-logo{font-family:'Playfair Display',serif;font-weight:800;color:#fff;font-size:1.3rem;margin-bottom:6px;}
+  .foot-dre{font-size:.78rem;color:#8fa0a6;margin-bottom:18px;}
+  .foot-grid p{font-size:.85rem;color:#a9b7bb;}
+  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr;}}
+  .bottom-bar{display:flex;justify-content:space-between;padding:22px 0;font-size:.8rem;color:#8fa0a6;flex-wrap:wrap;gap:10px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">HASS<span>GROUP</span> USA</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="international.html">International</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn nav-cta">Partner with HASS</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow" style="color:#e4b9ab">About Hass Group</div>
+    <h1>Real estate, reimagined.</h1>
+    <p>Licensed since 2012, HASS GROUP has grown into a data-driven real estate firm serving Southern California, Baja Mexico, and Italy — built on VIP service, elite local expertise, and a tech-first approach to buying and selling.</p>
+  </div>
+</section>
+
+<section class="story">
+  <div class="container story-grid">
+    <div class="story-copy">
+      <div class="eyebrow">Company History</div>
+      <h2>Over a decade of market command.</h2>
+      <p>HASS GROUP was built on a simple idea: real estate should be run on data, not guesswork. Since 2012, that approach has grown into one of Southern California's most results-driven firms — serving Ventura, Santa Barbara, Montecito, Malibu, Calabasas, Thousand Oaks, and Ojai.</p>
+      <p>We're breaking the mold with a fresh, tech-driven approach to buying and selling. Expect bold strategies, innovative solutions, and exceptional results.</p>
+      <div class="story-tagline">"Go Where You're Treated Well." — HASS GROUP</div>
+    </div>
+    <div class="story-stats">
+      <div class="story-stat"><strong>13</strong><span>Years of Market Command</span></div>
+      <div class="story-stat"><strong>14,000+</strong><span>Active Properties</span></div>
+      <div class="story-stat"><strong>5,000+</strong><span>Investors Served</span></div>
+      <div class="story-stat"><strong>400+</strong><span>Homes Closed in 2025</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="container">
+    <div class="eyebrow">Mission &amp; Vision</div>
+    <h2>Real estate, reimagined.</h2>
+    <p>We're breaking the mold with a fresh, tech-driven approach to buying and selling in Southern California. Our mission is built on three commitments: VIP-level service for every client, eco-friendly practices across our developments, and cutting-edge technology that keeps our clients ahead of the market.</p>
+    <div class="motto">Bold strategies. Innovative solutions. Exceptional results.</div>
+  </div>
+</section>
+
+<section class="presence">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Global Presence</div>
+      <h2>Southern California, Baja Mexico, and Italy.</h2>
+      <p>HASS GROUP operates across three markets, giving clients a single trusted partner whether they're buying locally or investing internationally.</p>
+    </div>
+    <div class="presence-grid">
+      <div class="presence-card">
+        <h3>United States</h3>
+        <p>Headquartered in Ventura, California, serving Ventura County, Santa Barbara, Montecito, Malibu, Calabasas, Thousand Oaks, and Ojai.</p>
+      </div>
+      <div class="presence-card">
+        <h3>Baja Mexico</h3>
+        <p>Beachfront and eco-friendly property investment opportunities for clients looking south of the border.</p>
+      </div>
+      <div class="presence-card">
+        <h3>Italy</h3>
+        <p>Retirement homes, eco-resorts, and land acquisition for clients drawn to the Italian lifestyle.</p>
+      </div>
+    </div>
+    <div class="cta-wrap" style="margin-top:46px;"><a href="international.html" class="btn rust">Explore International Investments</a></div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Meet the Team</div>
+      <h2>Excellence isn't built by chance.</h2>
+      <p>The HASS GROUP team combines technology, market intelligence, and creative strategy to move properties faster and smarter across Southern California.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">R</div>
+        <h3>Rohail</h3>
+        <span class="team-role">Chief Technical Officer</span>
+        <p>The architect behind our data systems and AI-driven insights. Rohail turns raw market data into precision tools that help us predict trends and outperform the competition.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">A</div>
+        <h3>Ayesha</h3>
+        <span class="team-role">Director of Communications</span>
+        <p>The voice of HASS GROUP and the strategist behind our storytelling. Ayesha ensures every listing, brand message, and negotiation reflects the clarity and confidence our clients expect.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">TC</div>
+        <h3>The Closer</h3>
+        <span class="team-role">Lead Negotiator</span>
+        <p>A results-first dealmaker with an unmatched record of success. He turns hesitation into action and delivers outcomes that redefine what clients think is possible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2>We Are Trusted. Respected. Recommended.</h2>
+    <p>Every deal tells a story, and every client reminds us why precision and trust will always matter most.</p>
+    <div class="t-grid">
+      <div class="t-card">
+        <p>"HASS GROUP sold my Ventura home in 8 days for 11% above asking. Their strategy worked exactly as promised."</p>
+        <span>— Lina M., Doha</span>
+      </div>
+      <div class="t-card">
+        <p>"They turned my Ojai property from a slow listing into a bidding war. Closed in two weeks, all cash."</p>
+        <span>— Daniel T., London</span>
+      </div>
+      <div class="t-card">
+        <p>"HASS GROUP analyzed the data, adjusted our price, and found the perfect buyer within days. We made $130K more than expected."</p>
+        <span>— Maya S., Los Angeles</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to work with a team that owns the market?</h2>
+    <p>Whether you're buying, selling, or investing internationally, HASS GROUP brings the data, the strategy, and the local expertise to get it done.</p>
+    <a href="#contact" class="btn rust">Partner with HASS</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="foot-actions">
+      <a class="foot-action" href="tel:18058880133">Call us ↗</a>
+      <a class="foot-action" href="mailto:hassgroupusa@gmail.com">Inquire Now ↗</a>
+      <a class="foot-action" href="mailto:hassgroupusa@gmail.com">Send a Message ↗</a>
+    </div>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">HASS GROUP USA</div>
+        <div class="foot-dre">DRE: 01894430<br>LPT REALTY: 02248983</div>
+        <p>Licensed since 2012, HASS GROUP turns California's toughest markets into winning deals. Backed by real data, predictive strategy, and elite local expertise, we help clients buy and sell with precision, speed, and profit.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="international.html">International</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <ul>
+          <li><a href="#contact">Buy with HASS</a></li>
+          <li><a href="#contact">Sell with HASS</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="#contact">Our Locations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Information</h4>
+        <ul>
+          <li>9452 Telephone Road Suite 210, Ventura CA 93004, United States</li>
+          <li>2108 N ST STE N, Sacramento CA 95816, United States</li>
+          <li><a href="mailto:hassgroupusa@gmail.com">hassgroupusa@gmail.com</a></li>
+          <li><a href="tel:18058880133">(805) 888-0133</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <span>All Rights Reserved HASS Group USA</span>
+      <span>&copy; 2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
