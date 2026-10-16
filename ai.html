@@ -50,6 +50,11 @@ section{padding-block:56px}
 .case p{margin:0;color:var(--ink)}
 .case .tag{font-size:13px;color:var(--rust);font-weight:600;letter-spacing:.04em;margin-bottom:6px}
 
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 32px;margin-top:32px}
+@media(max-width:860px){.who{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.who{grid-template-columns:1fr}}
+.who h3{font-size:20px;margin-bottom:6px;padding-top:12px;border-top:3px solid var(--teal-light)}
+.who p{margin:0}
 .steps{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:s}
 @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
@@ -121,6 +126,24 @@ footer p{margin:4px 0;max-width:none}
       <div class="case"><div class="tag">HEALTH PAPERWORK</div><h3>Years of records, organized in an evening</h3><p>It downloaded records from three patient portals, filed them by doctor, and wrote a one-page summary to hand any new physician.</p></div>
       <div class="case"><div class="tag">RENTALS</div><h3>A listing website in one sitting</h3><p>It built a rental page from the photos, counted the restaurants within a short walk, fixed the Zillow ad and drafted every reply.</p></div>
       <div class="case"><div class="tag">THE INBOX</div><h3>A mail check before you wake up</h3><p>Every morning it reads your inboxes, flags what matters (attorney, doctors, bills, deadlines) and drafts the answers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <h2>Who we help</h2>
+    <p class="lead">AI pays off fastest where people spend their day on email, documents and follow-ups. Here's what an assistant takes over in each line of work.</p>
+    <div class="who">
+      <div><h3>Law offices</h3><p>Intake summaries, document checklists, deadline reminders, first drafts of routine letters for attorney review.</p></div>
+      <div><h3>Real estate agents</h3><p>Listing descriptions, showing follow-ups, transaction checklists, a market note for every client.</p></div>
+      <div><h3>Property managers and landlords</h3><p>Tenant replies in minutes, maintenance requests sorted, utility splits, owner statements, renewal reminders.</p></div>
+      <div><h3>Insurance agencies</h3><p>Renewal reminders, quote comparisons, certificate requests, clean notes after every client call.</p></div>
+      <div><h3>Accountants and bookkeepers</h3><p>Receipts sorted by tax category, document requests to clients, organizers ready before the busy season.</p></div>
+      <div><h3>Medical and dental front offices</h3><p>Scheduling, referral letters and form letters for staff. Administrative work only; patient records stay in your own secure systems.</p></div>
+      <div><h3>Contractors and trades</h3><p>Estimates from your notes, job scheduling, invoice follow-ups, permit paperwork checklists.</p></div>
+      <div><h3>Family caregivers</h3><p>Doctor portals, bills, insurance letters and court or attorney paperwork for a parent, organized and tracked.</p></div>
+      <div><h3>Small shops and breeders</h3><p>Customer inquiries answered, waitlists, social posts, registrations and records kept up to date.</p></div>
     </div>
   </div>
 </section>
