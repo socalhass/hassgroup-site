@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HASS GROUP AIQ Search | Search Homes | HASS GROUP USA</title>
+<meta name="description" content="Search every active MLS listing across Ventura County, Ojai and Santa Barbara with HASS GROUP AIQ Search.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2a3d;
+    --teal:#2e6069;
+    --teal-light:#7fa7ac;
+    --cream:#faf8f4;
+    --ink:#1c2b33;
+    --rust:#c0604a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--navy);}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-block;background:var(--teal-light);color:#fff;padding:14px 30px;border-radius:30px;font-weight:500;letter-spacing:.02em;transition:background .2s;border:none;cursor:pointer;font-family:inherit;font-size:.95rem;}
+  .btn:hover{background:var(--teal);}
+  .btn.rust{background:var(--rust);}
+  .btn.rust:hover{background:#a34d39;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.95);backdrop-filter:blur(6px);border-bottom:1px solid rgba(15,42,61,.08);}
+  header .container{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;color:var(--navy);letter-spacing:.02em;}
+  .logo span{color:var(--rust);}
+  nav ul{list-style:none;display:none;gap:22px;font-size:.88rem;}
+  nav a:hover{color:var(--teal);}
+  nav a.active{color:var(--rust);}
+  .nav-cta{display:none;}
+  @media(min-width:960px){nav ul{display:flex;}.nav-cta{display:inline-block;}}
+
+  .page-hero{position:relative;min-height:40vh;display:flex;align-items:center;background:linear-gradient(180deg,rgba(15,42,61,.6),rgba(15,42,61,.88)),url('img/image1.jpg') center/cover no-repeat;color:#fff;padding:70px 0;}
+  .page-hero h1{color:#fff;font-size:clamp(1.9rem,4.5vw,3.2rem);max-width:760px;margin-bottom:16px;}
+  .page-hero p{max-width:640px;opacity:.92;font-size:1.05rem;}
+
+  .eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--rust);font-weight:600;margin-bottom:10px;}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 20px;}
+  .section-head p{color:#44565f;max-width:640px;margin:14px auto 0;}
+
+  .notice{background:#fff;border-left:4px solid var(--teal-light);border-radius:0 10px 10px 0;padding:22px 26px;max-width:860px;margin:0 auto 0;box-shadow:0 10px 30px rgba(15,42,61,.05);}
+  .notice p{color:#44565f;font-size:.92rem;}
+  .notice strong{color:var(--navy);}
+
+  .featured{padding:70px 0 0;}
+  .feat-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 14px 40px rgba(15,42,61,.1);display:grid;grid-template-columns:1.1fr 1fr;}
+  .feat-gallery{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;min-height:340px;}
+  .feat-gallery img{width:100%;height:100%;object-fit:cover;}
+  .feat-gallery a:first-child{grid-row:1/3;}
+  .feat-body{padding:38px 40px;display:flex;flex-direction:column;justify-content:center;}
+  .feat-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .feat-tag{background:var(--rust);color:#fff;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;font-weight:600;}
+  .feat-body h3{font-size:1.6rem;margin-bottom:4px;}
+  .feat-loc{color:#7c8a8f;font-size:.88rem;margin-bottom:18px;}
+  .feat-specs{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:18px;}
+  .feat-specs div{font-size:.84rem;color:#44565f;}
+  .feat-specs strong{display:block;color:var(--navy);font-family:'Playfair Display',serif;font-size:1.05rem;}
+  .feat-body p.desc{color:#50626a;font-size:.92rem;margin-bottom:22px;}
+  .feat-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .feat-listed-by{margin-top:18px;font-size:.78rem;color:#8a97a0;}
+  @media(max-width:860px){.feat-card{grid-template-columns:1fr;}.feat-gallery{min-height:260px;}}
+
+  .floor-section{margin-top:40px;}
+  .floor-label{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .floor-label .num{width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.9rem;flex-shrink:0;}
+  .floor-label h4{font-size:1.2rem;margin:0;}
+  .floor-label .floor-note{color:#8a97a0;font-size:.82rem;margin-left:auto;}
+  .floorplan-block{margin-top:40px;text-align:center;}
+  .floorplan-block img{border-radius:16px;box-shadow:0 10px 30px rgba(15,42,61,.08);margin:18px auto 0;max-width:100%;}
+  .floorplan-note{color:#8a97a0;font-size:.78rem;margin-top:10px;}
+
+  .browse{padding:80px 0 100px;}
+  .filter-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:40px 0 46px;}
+  .filter-btn{background:#fff;border:1px solid rgba(15,42,61,.12);color:var(--navy);padding:9px 18px;border-radius:30px;font-family:inherit;font-size:.85rem;cursor:pointer;transition:.2s;}
+  .filter-btn:hover{border-color:var(--teal-light);}
+  .filter-btn.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+  .listing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;}
+  .listing-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(15,42,61,.07);transition:opacity .25s,transform .25s;}
+  .listing-card.hide{display:none;}
+  .listing-card .thumb{height:200px;background-size:cover;background-position:center;position:relative;}
+  .listing-card .thumb.gradient-baja{background:linear-gradient(135deg,var(--teal),var(--navy));display:flex;align-items:flex-end;padding:20px;}
+  .listing-card .thumb.gradient-italy{background:linear-gradient(135deg,var(--rust),var(--navy));display:flex;align-items:flex-end;padding:20px;}
+  .listing-card .thumb .tag{background:rgba(255,255,255,.15);color:#fff;font-size:.75rem;padding:6px 12px;border-radius:20px;backdrop-filter:blur(4px);}
+  .listing-card .thumb-tag{position:absolute;top:14px;left:14px;background:rgba(15,42,61,.75);color:#fff;font-size:.72rem;padding:6px 12px;border-radius:20px;letter-spacing:.03em;}
+  .listing-body{padding:24px 24px 26px;}
+  .listing-body h3{font-size:1.15rem;margin-bottom:6px;}
+  .listing-stat{color:var(--rust);font-size:.82rem;font-weight:600;margin-bottom:12px;}
+  .listing-body p{color:#50626a;font-size:.9rem;margin-bottom:16px;}
+  .listing-body a.inquire{color:var(--teal);font-size:.86rem;font-weight:600;}
+  .listing-body a.inquire:hover{color:var(--navy);}
+
+  .access{background:var(--navy);padding:90px 0;text-align:center;color:#fff;}
+  .access .eyebrow{color:#e4b9ab;}
+  .access h2{color:#fff;font-size:clamp(1.7rem,3.5vw,2.4rem);max-width:720px;margin:0 auto 18px;}
+  .access p{max-width:620px;margin:0 auto 10px;color:#c7d4d8;}
+  .access .btn{margin-top:22px;}
+
+  .alerts{padding:100px 0;text-align:center;}
+  .alert-form{max-width:640px;margin:46px auto 0;background:#fff;border-radius:16px;padding:36px;box-shadow:0 10px 30px rgba(15,42,61,.06);text-align:left;}
+  .alert-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  .alert-form label{display:block;font-size:.8rem;color:var(--navy);font-weight:600;margin-bottom:6px;}
+  .alert-form input,.alert-form select{width:100%;padding:12px 14px;border:1px solid rgba(15,42,61,.15);border-radius:8px;font-family:inherit;font-size:.9rem;background:var(--cream);}
+  .alert-form .full{grid-column:1/-1;}
+  .alert-form .btn{width:100%;margin-top:6px;}
+  .alert-note{font-size:.78rem;color:#7c8a8f;margin-top:14px;text-align:center;}
+  @media(max-width:600px){.alert-row{grid-template-columns:1fr;}}
+
+  footer{background:var(--navy);color:#cfd9dc;padding-top:60px;}
+  .foot-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:50px;}
+  .foot-action{background:rgba(255,255,255,.06);border-radius:14px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;font-family:'Playfair Display',serif;font-weight:600;color:#fff;}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1.3fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-grid h4{color:#fff;font-size:.95rem;margin-bottom:16px;letter-spacing:.03em;}
+  .foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:.88rem;}
+  .foot-logo{font-family:'Playfair Display',serif;font-weight:800;color:#fff;font-size:1.3rem;margin-bottom:6px;}
+  .foot-dre{font-size:.78rem;color:#8fa0a6;margin-bottom:18px;}
+  .foot-grid p{font-size:.85rem;color:#a9b7bb;}
+  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr;}}
+  .bottom-bar{display:flex;justify-content:space-between;padding:22px 0;font-size:.8rem;color:#8fa0a6;flex-wrap:wrap;gap:10px;}
+  .container.notice-wrap{margin-top:-28px;position:relative;z-index:2;}
+
+  .aiq-wrap{padding:50px 0 90px;}
+  .aiq-badge{display:inline-block;margin-top:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:30px;}
+  .aiq-badge b{color:#e4b9ab;}
+  .aiq-frame{background:#fff;border-radius:16px;box-shadow:0 14px 40px rgba(15,42,61,.1);overflow:hidden;}
+  .aiq-frame iframe{width:100%;height:1000px;border:0;display:block;}
+  .aiq-foot{text-align:center;color:#7c8a8f;font-size:.8rem;margin-top:16px;}
+  .aiq-foot strong{color:var(--navy);}
+  @media(max-width:700px){.aiq-frame iframe{height:1200px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">HASS<span>GROUP</span> USA</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="search.html" class="active">AIQ Search</a></li>
+        <li><a href="international.html">International</a></li>
+        <li><a href="ai.html">AI</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn nav-cta">Partner with HASS</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow" style="color:#e4b9ab">Home Search</div>
+    <h1>HASS GROUP AIQ Search</h1>
+    <p>Search every active MLS listing across Ventura County, Ojai, Santa Barbara and beyond &mdash; live from the MLS.</p>
+    <span class="aiq-badge">Powered by <b>HASS GROUP AIQ</b></span>
+  </div>
+</section>
+
+<section class="aiq-wrap">
+  <div class="container">
+    <div class="aiq-frame">
+      <iframe src="https://www.crmls.org/servlet/IDisplayListings?LA=EN" title="HASS GROUP AIQ Search" loading="lazy"></iframe>
+    </div>
+    <p class="aiq-foot">Powered by <strong>HASS GROUP AIQ</strong> &middot; Listing data provided by CRMLS. Questions about a home? <a href="tel:18058880133" style="color:var(--teal);font-weight:600">Call (805) 888-0133</a></p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="foot-actions">
+      <a class="foot-action" href="tel:18058880133">Call us ↗</a>
+      <a class="foot-action" href="mailto:hassgroupusa@gmail.com">Inquire Now ↗</a>
+      <a class="foot-action" href="mailto:hassgroupusa@gmail.com">Send a Message ↗</a>
+    </div>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Andre Hass Group</div>
+        <div class="foot-dre">Darrell Andre Hass, Licensed Real Estate Salesperson<br>DRE# 01894430 &middot; REALTOR&reg;<br>Brokerage: LPT Realty, DRE# 02248983<br>Equal Housing Opportunity</div>
+        <p>Licensed since 2012, Andre Hass Group helps buyers, sellers and investors across Ventura County, Ojai and Santa Barbara with local knowledge, clear communication and modern tools.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="international.html">International</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <ul>
+          <li><a href="#contact">Buy with HASS</a></li>
+          <li><a href="#contact">Sell with HASS</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="#contact">Our Locations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Information</h4>
+        <ul>
+          <li>9452 Telephone Road Suite 210, Ventura CA 93004, United States</li>
+          <li><a href="mailto:hassgroupusa@gmail.com">hassgroupusa@gmail.com</a></li>
+          <li><a href="tel:18058880133">(805) 888-0133</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <span>All Rights Reserved Andre Hass Group</span>
+      <span>&copy; 2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
